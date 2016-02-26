@@ -23,13 +23,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-  }
-  
-  @IBAction func colorOne(sender: UIButton) {
-    view.backgroundColor = UIColor(hexString: sender.titleLabel!.text!)
-  }
+    
+    @IBOutlet weak var colorChangingView: UIView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    @IBAction func colorOne(sender: UIButton) {
+        self.colorChangingView.backgroundColor = UIColor(hexString: sender.titleLabel!.text!)
+    }
 }
 
